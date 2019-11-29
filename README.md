@@ -578,7 +578,7 @@ myiq.close_digital_option(id)
 ```
 #### get digital data
 
-##### Sample1
+##### Sample 1
 
 ```python
 from iqoptionapi.stable_api import IQ_Option
@@ -601,7 +601,7 @@ while True:
 print(myiq.get_digital_position(id))
 print(myiq.check_win_digital(id))
 ```
-#####Sample 2
+##### Sample 2
 
 ```python
 #print(myiq.get_order(id))#not work for digital
@@ -706,7 +706,7 @@ Time Interval
     * size:[1,5,10,15,30,60,120,300,600,900,1800,3600,7200,14400,28800,43200,86400,604800,2592000,"all"]
 
 ---
-### time
+### Time
 
 #### <a id=timestamp> get_server_timestamp</a>
 the get_server_timestamp time is sync with iqoption
