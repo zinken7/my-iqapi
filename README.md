@@ -13,7 +13,7 @@ pip3 install websocket-client==0.56
 ## Installation & GET new version
 For Python3
 ```bash
-pip3 install -U git+git://github.com/Lu-Yi-Hsun/iqoptionapi.git
+pip3 install -U git+git://github.com/zinken7/my-iqapi.git
 ```
 ---
 ## Option
@@ -157,7 +157,7 @@ myiq.buy(Money,ACTIVES,ACTION,expirations)
                 #Money:How many you want to buy type(int)
                 #ACTIVES:Sample input "EURUSD" OR "EURGBP".... you can view by get_all_ACTIVES_OPCODE
                 #ACTION:"call"/"put" type(str)
-                #expirations:input minute,careful too large will false to buy(Closed market time)thank Darth-Carrotpie's code (int)https://github.com/Lu-Yi-Hsun/iqoptionapi/issues/6
+                #expirations:input minute,careful too large will false to buy(Closed market time)
                 #return:if sucess return (True,id_number) esle return(Fale,None) 
 ```
 #### <a id=buymulti>buy_multi</a>
@@ -364,9 +364,8 @@ print(myiq.get_option_open_by_other_pc())
 ___
 ---
 ### <a id=digital>For Digital</a>
-[Digital options buy with actual price Sample code](https://github.com/Lu-Yi-Hsun/iqoptionapi/issues/65#issuecomment-511660908)
 
-#### Sample
+#### Digital options buy with actual price!
 
 ```python
 from iqoptionapi.stable_api import IQ_Option
@@ -762,8 +761,6 @@ myiq.unsubscribe_top_assets_updated(instrument_type)
 ```
 
 #### get popularity by top_assets_updated() api
-
-https://github.com/Lu-Yi-Hsun/iqoptionapi/issues/131
 
 ![](image/get_updates.png)
 
