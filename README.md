@@ -112,8 +112,8 @@ instrument_type: "binary-option"/"turbo-option"/"digital-option"
 import time
 from iqoptionapi.stable_api import IQ_Option
 myiq=IQ_Option("email","password")
-#instrument_type: "binary-option"/"turbo-option"/"digital-option"/"crypto"/"forex"/"cfd"
-instrument_type=["binary-option","turbo-option","digital-option","crypto","forex","cfd"]
+#instrument_type: "binary-option"/"turbo-option"/"digital-option"
+instrument_type=["binary-option","turbo-option","digital-option"]
 for ins in instrument_type:
     myiq.subscribe_commission_changed(ins)
 print("Start stream please wait profit change...")
@@ -741,7 +741,7 @@ while True:
 ---
 ### Get top_assets_updated
 
-instrument_type="binary-option"/"digital-option"/"forex"/"cfd"/"crypto"
+instrument_type="binary-option"/"digital-option"
 
 ```python
 from iqoptionapi.stable_api import IQ_Option
@@ -749,7 +749,7 @@ import logging
 import time
 #logging.basicConfig(level=logging.DEBUG,format='%(asctime)s %(message)s')
 myiq=IQ_Option("email","password")
-instrument_type="digital-option"#"binary-option"/"digital-option"/"forex"/"cfd"/"crypto"
+instrument_type="digital-option"#"binary-option"/"digital-option"
 myiq.subscribe_top_assets_updated(instrument_type)
 
 print("__Please_wait_for_sec__")
@@ -765,7 +765,7 @@ myiq.unsubscribe_top_assets_updated(instrument_type)
 
 https://github.com/Lu-Yi-Hsun/iqoptionapi/issues/131
 
-![](https://user-images.githubusercontent.com/7738916/66943816-c9ee1380-f000-11e9-996e-e06efba64101.png)
+![](image/get_updates.png)
 
 ```python
 from iqoptionapi.stable_api import IQ_Option
@@ -781,7 +781,7 @@ myiq=IQ_Option("email","password")
 myiq.update_ACTIVES_OPCODE()
 opcode_data=myiq.get_all_ACTIVES_OPCODE()
 
-instrument_type="digital-option"#"binary-option"/"digital-option"/"forex"/"cfd"/"crypto"
+instrument_type="digital-option"#"binary-option"/"digital-option"
 myiq.subscribe_top_assets_updated(instrument_type)
 
 
@@ -833,7 +833,7 @@ print(myiq.reset_practice_balance())
 #### Change real/practice Account
 ```python
 myiq.change_balance(MODE)
-                        #MODE: "PRACTICE"/"REAL"
+#MODE: "PRACTICE"/"REAL"
 ```
 
 ---
